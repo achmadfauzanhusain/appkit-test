@@ -2,7 +2,7 @@
 
 import { createAppKit } from "@reown/appkit/react";
 import { EthersAdapter } from "@reown/appkit-adapter-ethers";
-import { mainnet, arbitrum } from "@reown/appkit/networks";
+import { mainnet } from "@reown/appkit/networks";
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
 
@@ -20,7 +20,7 @@ const metadata = {
 createAppKit({
   adapters: [new EthersAdapter()],
   metadata,
-  networks: [mainnet, arbitrum],
+  networks: [mainnet],
   projectId,
   features: {
     analytics: true,
